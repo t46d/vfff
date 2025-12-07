@@ -1,0 +1,41 @@
+:root {
+  --bg: #0A0A0A;
+  --glass: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.18);
+
+  --c-electric: #00F0FF;
+  --c-pink: #FF00C8;
+  --c-violet: #B500FF;
+
+  --text: #EAEAEA;
+  --muted: #9AA0A6;
+
+  --radius: 12px;
+  --blur: 14px;
+
+  --shadow-neon: 0 0 14px rgba(0,240,255,0.7);
+  --shadow-pink: 0 0 18px rgba(255,0,200,0.6);
+  --shadow-violet: 0 0 18px rgba(181,0,255,0.55);
+}
+
+/* Glass */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(var(--blur));
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35), var(--shadow-neon);
+}
+
+/* Layout chrome */
+.page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.title-gradient {
+  background: linear-gradient(135deg, var(--c-electric), var(--c-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

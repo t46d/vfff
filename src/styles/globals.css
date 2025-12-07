@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+html, body, #__next { height: 100%; }
+body {
+  margin: 0;
+  background: #0A0A0A;
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+}
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+.section { padding: 48px 0; }
+
+:root { --container: 1100px; }
+@media (max-width: 1024px) { :root { --container: 920px; } }
+@media (max-width: 768px) {
+  :root { --container: 680px; }
+  .grid-3 { grid-template-columns: 1fr 1fr !important; }
+  nav { gap: 8px !important; }
+}
+@media (max-width: 480px) {
+  :root { --container: 92vw; }
+  .grid-3 { grid-template-columns: 1fr !important; }
+  .neon-btn, .input-glass { width: 100%; }
+}
+
+/* RTL helpers */
+[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
+[dir="rtl"] nav a.badge-glass { direction: rtl; }
