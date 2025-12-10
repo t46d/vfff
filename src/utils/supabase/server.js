@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 // تهيئة عميل Supabase لمكونات الخادم (Server Components)
 export const createClient = (cookieStore) => {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
   return createServerClient(
     supabaseUrl,
